@@ -24,6 +24,13 @@ listContainer.addEventListener("click",function(e){
     }
 },false);
 
+inputBox.addEventListener("keyup",function(event){
+        event.preventDefault();
+     if (event.key === 'Enter'){
+        addTask();
+     }
+  }, false);
+
 function saveData(){
     localStorage.setItem("data",listContainer.innerHTML);
 }
